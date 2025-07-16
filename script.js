@@ -107,5 +107,20 @@ weaponModal.addEventListener('click', (e) => {
   }
 });
 
+// Weapon category toggle logic
+const categoryToggles = document.querySelectorAll('.category-toggle');
+categoryToggles.forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    const cardList = toggle.nextElementSibling;
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      toggle.setAttribute('aria-expanded', 'false');
+      cardList.classList.add('hidden-category');
+    } else {
+      toggle.setAttribute('aria-expanded', 'true');
+      cardList.classList.remove('hidden-category');
+    }
+  });
+});
 
 // sigma sigma boy

@@ -510,6 +510,36 @@ h1 {
   color: #fff;
 }
 
+/* Hide category card lists by default */
+.hidden-category {
+  display: none;
+}
+
+.category-toggle {
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  margin-top: 32px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3rem;
+  transition: color 0.2s;
+}
+.category-toggle:hover {
+  color: #3366bb;
+  text-decoration: underline;
+}
+.toggle-icon {
+  display: inline-block;
+  transition: transform 0.2s;
+  font-size: 1.1em;
+}
+.category-toggle[aria-expanded="true"] .toggle-icon {
+  transform: rotate(90deg);
+}
+
 @media (max-width: 900px) {
   .pet-card {
     width: 47%;
