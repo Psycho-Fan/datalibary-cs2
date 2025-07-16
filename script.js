@@ -79,5 +79,33 @@ mapModal.addEventListener('click', (e) => {
   }
 });
 
+const weaponCards = document.querySelectorAll('.weapon-card');
+const weaponModal = document.getElementById('weapon-modal');
+const closeWeaponModal = document.getElementById('closeWeaponModal');
+const modalWeaponImg = document.getElementById('modalWeaponImg');
+const modalWeaponTitle = document.getElementById('modalWeaponTitle');
+const modalWeaponOverview = document.getElementById('modalWeaponOverview');
+const modalWeaponFact = document.getElementById('modalWeaponFact');
+
+weaponCards.forEach(card => {
+  card.addEventListener('click', () => {
+    modalWeaponImg.src = card.getAttribute('data-img');
+    modalWeaponTitle.textContent = card.getAttribute('data-title');
+    modalWeaponOverview.textContent = card.getAttribute('data-overview');
+    modalWeaponFact.textContent = card.getAttribute('data-fact');
+    weaponModal.classList.remove('hidden');
+  });
+});
+
+closeWeaponModal.addEventListener('click', () => {
+  weaponModal.classList.add('hidden');
+});
+
+weaponModal.addEventListener('click', (e) => {
+  if (e.target === weaponModal) {
+    weaponModal.classList.add('hidden');
+  }
+});
+
 
 // sigma sigma boy
