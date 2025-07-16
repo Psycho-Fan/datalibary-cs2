@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+
+      <nav id="main-navbar" class="navbar">
+      <a href="https://cooper55555.github.io/DataLibrary/" class="navbar-logo">DataLibrary</a>
+      <div class="navbar-links">
+        <button class="nav-btn active" data-section="first-section">Maps</button>
+        <button class="nav-btn" data-section="second-section">Update notes</button>
+      </div>
+    </nav>
+
+<div id="first-section" class="section">
+  <div class="settings-container">
+    <i class="fas fa-cog settings-icon" onclick="toggleTCGSettingsModal()"></i>
+  </div>
+  <!-- CS2 Maps Section -->
+  <section class="world-news">
+    <h2>CS2 Maps</h2>
+    <div class="map-card-list">
+      <div class="map-card" data-map="dust2" data-title="Dust II" data-img="https://wallpaperaccess.com/full/8747110.png" data-overview="Dust II is a classic map known for its simple layout and iconic mid doors. It is favored for its balance and fast-paced gameplay." data-fact="Fun Fact: Dust II has been featured in every major Counter-Strike tournament since its introduction.">
+        <img src="https://wallpaperaccess.com/full/8747110.png" alt="Dust II" class="map-image" />
+        <div class="map-info">
+          <h3>Dust II</h3>
+          <p>Dust II is one of the most iconic maps in Counter-Strike history, known for its balanced layout and intense mid control. The map features two bombsites and is set in a Middle Eastern town.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="mirage" data-title="Mirage" data-img="https://tse1.mm.bing.net/th/id/OIP.G0S3FNHmBZwFYa1mBkA18gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" data-overview="Mirage is a staple of competitive play, offering a variety of strategies for both teams. Control of mid is crucial for success." data-fact="Fun Fact: Mirage was originally a community-made map before being adopted officially by Valve.">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.G0S3FNHmBZwFYa1mBkA18gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Mirage" class="map-image" />
+        <div class="map-info">
+          <h3>Mirage</h3>
+          <p>Mirage is a popular competitive map set in a North African city. It offers a variety of strategic options for both teams, with open mid areas and well-defined bombsites.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="inferno" data-title="Inferno" data-img="https://www.dexerto.com/cdn-cgi/image/width=3840,quality=50,format=auto/https://editors.dexerto.com/wp-content/uploads/2023/06/30/a-site.jpeg" data-overview="Inferno is known for its tight chokepoints and tactical depth. Banana and apartments are key areas for both teams." data-fact="Fun Fact: Inferno's church bell can be rung by shooting it.">
+        <img src="https://www.dexerto.com/cdn-cgi/image/width=3840,quality=50,format=auto/https://editors.dexerto.com/wp-content/uploads/2023/06/30/a-site.jpeg" alt="Inferno" class="map-image" />
+        <div class="map-info">
+          <h3>Inferno</h3>
+          <p>Inferno is famous for its narrow chokepoints and tactical gameplay. The map is set in an Italian village and requires strong team coordination, especially around the banana and apartments areas.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="nuke" data-title="Nuke" data-img="https://prosettings.net/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cheight=500%2Cq=85%2Cwidth=1000/wp-content/uploads/cs2-nuke-update.jpg" data-overview="Nuke features a unique vertical layout with upper and lower bombsites. Rotations and positioning are key to mastering this map." data-fact="Fun Fact: Nuke is the only map with two bombsites stacked on top of each other.">
+        <img src="https://prosettings.net/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cheight=500%2Cq=85%2Cwidth=1000/wp-content/uploads/cs2-nuke-update.jpg" alt="Nuke" class="map-image" />
+        <div class="map-info">
+          <h3>Nuke</h3>
+          <p>Nuke is a unique map with a vertical layout, featuring both upper and lower bombsites. Set in a nuclear power plant, it challenges players with its complex rotations and multiple entry points.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="ancient" data-title="Ancient" data-img="https://prosettings.net/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cheight=995%2Cq=85%2Cwidth=1800/wp-content/uploads/ancient-1.jpg" data-overview="Ancient is set in a lush, overgrown temple complex. Its tight corridors and open mid make for dynamic gameplay." data-fact="Fun Fact: Ancient was added to the competitive pool in 2021, replacing Train.">
+        <img src="https://prosettings.net/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cheight=995%2Cq=85%2Cwidth=1800/wp-content/uploads/ancient-1.jpg" alt="Ancient" class="map-image" />
+        <div class="map-info">
+          <h3>Ancient</h3>
+          <p>Ancient is a newer addition to the CS2 map pool, set in a mysterious jungle temple. It features tight corridors and open spaces, rewarding both aggressive and methodical playstyles.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="overpass" data-title="Overpass" data-img="https://static.wikia.nocookie.net/cswikia/images/2/2d/CSGO_Overpass_Map.png" data-overview="Overpass is set in Berlin and features a unique multi-level design. Control of the central area is crucial for both teams." data-fact="Fun Fact: Overpass was the first map created by Valve specifically for CS:GO.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/2/2d/CSGO_Overpass_Map.png" alt="Overpass" class="map-image" />
+        <div class="map-info">
+          <h3>Overpass</h3>
+          <p>Overpass is a map set in Berlin, Germany, known for its verticality and multiple routes. The map rewards creative strategies and strong team coordination.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="vertigo" data-title="Vertigo" data-img="https://static.wikia.nocookie.net/cswikia/images/7/7e/CSGO_Vertigo_Map.png" data-overview="Vertigo is a high-rise construction site with tight corridors and dangerous ledges. Vertical play is a key feature." data-fact="Fun Fact: Vertigo was reworked extensively after its initial release to improve gameplay.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/7/7e/CSGO_Vertigo_Map.png" alt="Vertigo" class="map-image" />
+        <div class="map-info">
+          <h3>Vertigo</h3>
+          <p>Vertigo is set atop a skyscraper under construction. Its unique vertical layout and risky drop-offs make for exciting and unpredictable matches.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="anubis" data-title="Anubis" data-img="https://static.wikia.nocookie.net/cswikia/images/3/3e/CSGO_Anubis_Map.png" data-overview="Anubis is set in an ancient Egyptian temple complex, featuring water routes and open mid control." data-fact="Fun Fact: Anubis was originally a community map before being added to the official pool.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/3/3e/CSGO_Anubis_Map.png" alt="Anubis" class="map-image" />
+        <div class="map-info">
+          <h3>Anubis</h3>
+          <p>Anubis is an Egyptian-themed map with a mix of open spaces and tight corridors. Waterways and mid control are key to success on this map.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="office" data-title="Office" data-img="https://static.wikia.nocookie.net/cswikia/images/5/5e/CSGO_Office_Map.png" data-overview="Office is a hostage rescue map set in a snowy corporate building. Close-quarters combat is common." data-fact="Fun Fact: Office is one of the oldest maps in Counter-Strike, dating back to the original game.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/5/5e/CSGO_Office_Map.png" alt="Office" class="map-image" />
+        <div class="map-info">
+          <h3>Office</h3>
+          <p>Office is a classic hostage rescue map set in a snow-covered office building. It features tight hallways and lots of close-range action.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="train" data-title="Train" data-img="https://static.wikia.nocookie.net/cswikia/images/6/6e/CSGO_Train_Map.png" data-overview="Train is set in a railway yard with long sightlines and tight corners. It rewards precise aim and strategic positioning." data-fact="Fun Fact: Train has been a staple in Counter-Strike since the early days and is known for its iconic train cars.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/6/6e/CSGO_Train_Map.png" alt="Train" class="map-image" />
+        <div class="map-info">
+          <h3>Train</h3>
+          <p>Train is a classic map featuring a railway yard with multiple train cars and long sightlines. It requires sharp aim and good positioning to control the bombsites.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="cache" data-title="Cache" data-img="https://static.wikia.nocookie.net/cswikia/images/2/2a/CSGO_Cache_Map.png" data-overview="Cache is set in a radioactive storage facility. It is known for its balanced layout and fast-paced action." data-fact="Fun Fact: Cache was created by the community mapper FMPONE and later adopted by Valve.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/2/2a/CSGO_Cache_Map.png" alt="Cache" class="map-image" />
+        <div class="map-info">
+          <h3>Cache</h3>
+          <p>Cache is a fan-favorite map set in a Chernobyl-style industrial area. Its open mid and quick rotations make for dynamic gameplay.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="tuscan" data-title="Tuscan" data-img="https://static.wikia.nocookie.net/cswikia/images/8/8e/CSGO_Tuscan_Map.png" data-overview="Tuscan is a newly reintroduced map with a Mediterranean theme. It features a complex layout and multiple entry points." data-fact="Fun Fact: Tuscan was rebuilt from scratch for CS2 after years of community anticipation.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/8/8e/CSGO_Tuscan_Map.png" alt="Tuscan" class="map-image" />
+        <div class="map-info">
+          <h3>Tuscan</h3>
+          <p>Tuscan is a Mediterranean-themed map with a complex layout, rewarding creative strategies and teamwork. It was recently reintroduced to the competitive pool.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="italy" data-title="Italy" data-img="https://static.wikia.nocookie.net/cswikia/images/4/4e/CSGO_Italy_Map.png" data-overview="Italy is a hostage rescue map set in a picturesque Italian village. It features winding alleys and open plazas." data-fact="Fun Fact: Italy is one of the oldest maps in Counter-Strike and is known for its unique layout.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/4/4e/CSGO_Italy_Map.png" alt="Italy" class="map-image" />
+        <div class="map-info">
+          <h3>Italy</h3>
+          <p>Italy is a classic hostage rescue map set in a beautiful Italian village. Its winding alleys and open courtyards create exciting rescue scenarios.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="aztec" data-title="Aztec" data-img="https://static.wikia.nocookie.net/cswikia/images/9/9e/CSGO_Aztec_Map.png" data-overview="Aztec is set in a Mesoamerican ruin with bridges and water routes. It features long sightlines and risky bombsites." data-fact="Fun Fact: Aztec is known for its rainy weather and challenging visibility.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/9/9e/CSGO_Aztec_Map.png" alt="Aztec" class="map-image" />
+        <div class="map-info">
+          <h3>Aztec</h3>
+          <p>Aztec is a classic map set in ancient ruins, featuring long-range combat and tricky water crossings. It is famous for its unique setting and weather effects.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="cobblestone" data-title="Cobblestone" data-img="https://static.wikia.nocookie.net/cswikia/images/1/1e/CSGO_Cobblestone_Map.png" data-overview="Cobblestone is set in a medieval castle with open courtyards and tight halls. It rewards creative strategies." data-fact="Fun Fact: Cobblestone was removed from the active duty pool in 2018 for a rework.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/1/1e/CSGO_Cobblestone_Map.png" alt="Cobblestone" class="map-image" />
+        <div class="map-info">
+          <h3>Cobblestone</h3>
+          <p>Cobblestone is a medieval-themed map with large open areas and tight corridors. Its unique layout encourages a variety of tactics.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="dust" data-title="Dust" data-img="https://static.wikia.nocookie.net/cswikia/images/2/2e/CSGO_Dust_Map.png" data-overview="Dust is the original Middle Eastern-themed map, known for its simple layout and fast rounds." data-fact="Fun Fact: Dust was the inspiration for Dust II and is one of the oldest maps in CS history.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/2/2e/CSGO_Dust_Map.png" alt="Dust" class="map-image" />
+        <div class="map-info">
+          <h3>Dust</h3>
+          <p>Dust is the map that started it all, featuring a straightforward layout and quick gameplay. It paved the way for many future maps in the series.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="shortdust" data-title="Shortdust" data-img="https://static.wikia.nocookie.net/cswikia/images/3/3e/CSGO_Shortdust_Map.png" data-overview="Shortdust is a compact version of Dust, designed for fast-paced matches and quick rounds." data-fact="Fun Fact: Shortdust is popular in the Wingman mode for its small size.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/3/3e/CSGO_Shortdust_Map.png" alt="Shortdust" class="map-image" />
+        <div class="map-info">
+          <h3>Shortdust</h3>
+          <p>Shortdust is a smaller, faster version of the classic Dust map, perfect for quick games and intense duels.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="shortnuke" data-title="Shortnuke" data-img="https://static.wikia.nocookie.net/cswikia/images/4/4e/CSGO_Shortnuke_Map.png" data-overview="Shortnuke is a condensed version of Nuke, focusing on close-quarters action and rapid rounds." data-fact="Fun Fact: Shortnuke is a favorite in Wingman mode for its tight layout.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/4/4e/CSGO_Shortnuke_Map.png" alt="Shortnuke" class="map-image" />
+        <div class="map-info">
+          <h3>Shortnuke</h3>
+          <p>Shortnuke offers a fast-paced, close-quarters experience based on the classic Nuke map, ideal for small teams and quick strategies.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="lake" data-title="Lake" data-img="https://static.wikia.nocookie.net/cswikia/images/5/5e/CSGO_Lake_Map.png" data-overview="Lake is a small map set around a lakeside house, popular in Arms Race and Danger Zone modes." data-fact="Fun Fact: Lake is known for its relaxing scenery and intense close-range fights.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/5/5e/CSGO_Lake_Map.png" alt="Lake" class="map-image" />
+        <div class="map-info">
+          <h3>Lake</h3>
+          <p>Lake is a compact map set around a beautiful lakeside house, offering fast action and close-quarters combat.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="safehouse" data-title="Safehouse" data-img="https://static.wikia.nocookie.net/cswikia/images/6/6e/CSGO_Safehouse_Map.png" data-overview="Safehouse is a small map set in a rural home, featured in Arms Race and Danger Zone." data-fact="Fun Fact: Safehouse is one of the smallest maps in CS:GO.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/6/6e/CSGO_Safehouse_Map.png" alt="Safehouse" class="map-image" />
+        <div class="map-info">
+          <h3>Safehouse</h3>
+          <p>Safehouse is a tiny map set in a countryside home, perfect for quick matches and close-range battles.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="stmarc" data-title="St. Marc" data-img="https://static.wikia.nocookie.net/cswikia/images/7/7e/CSGO_StMarc_Map.png" data-overview="St. Marc is a sunny map set in a coastal town, popular in Arms Race and casual play." data-fact="Fun Fact: St. Marc features destructible environments and vibrant visuals.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/7/7e/CSGO_StMarc_Map.png" alt="St. Marc" class="map-image" />
+        <div class="map-info">
+          <h3>St. Marc</h3>
+          <p>St. Marc is a bright, colorful map set in a coastal village, known for its destructible cover and lively setting.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="bank" data-title="Bank" data-img="https://static.wikia.nocookie.net/cswikia/images/8/8e/CSGO_Bank_Map.png" data-overview="Bank is a small map set in a city bank, featured in Arms Race and casual modes." data-fact="Fun Fact: Bank is part of the Operation Payback map group.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/8/8e/CSGO_Bank_Map.png" alt="Bank" class="map-image" />
+        <div class="map-info">
+          <h3>Bank</h3>
+          <p>Bank is a compact map set in a modern city bank, offering fast-paced action and tight corners.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="agency" data-title="Agency" data-img="https://static.wikia.nocookie.net/cswikia/images/9/9e/CSGO_Agency_Map.png" data-overview="Agency is a hostage rescue map set in a high-rise office building. It features multiple floors and elevators." data-fact="Fun Fact: Agency was created by the community and later added to the official map pool.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/9/9e/CSGO_Agency_Map.png" alt="Agency" class="map-image" />
+        <div class="map-info">
+          <h3>Agency</h3>
+          <p>Agency is a multi-level office map with elevators and plenty of vertical gameplay. It is a favorite for hostage rescue scenarios.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="assault" data-title="Assault" data-img="https://static.wikia.nocookie.net/cswikia/images/1/1e/CSGO_Assault_Map.png" data-overview="Assault is a classic hostage rescue map set in a warehouse. It is known for its intense standoffs." data-fact="Fun Fact: Assault is one of the oldest maps in Counter-Strike, dating back to the original beta.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/1/1e/CSGO_Assault_Map.png" alt="Assault" class="map-image" />
+        <div class="map-info">
+          <h3>Assault</h3>
+          <p>Assault is a legendary warehouse map, famous for its hostage rescue gameplay and tense firefights.</p>
+        </div>
+      </div>
+      <div class="map-card" data-map="canals" data-title="Canals" data-img="https://static.wikia.nocookie.net/cswikia/images/2/2e/CSGO_Canals_Map.png" data-overview="Canals is set in a historic Italian city with waterways and open plazas. It features unique architecture and gameplay." data-fact="Fun Fact: Canals was designed to showcase new graphical features in CS:GO.">
+        <img src="https://static.wikia.nocookie.net/cswikia/images/2/2e/CSGO_Canals_Map.png" alt="Canals" class="map-image" />
+        <div class="map-info">
+          <h3>Canals</h3>
+          <p>Canals is a visually stunning map set in a historic city, featuring water routes and open spaces for creative tactics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Map Detail Modal -->
+<div id="map-modal" class="modal hidden">
+  <div class="modal-content map-modal-content">
+    <span class="close-button" id="closeMapModal">×</span>
+    <img id="modalMapImg" src="" alt="Map Image" style="width:100%;max-height:320px;object-fit:cover;border-radius:8px;" />
+    <h2 id="modalMapTitle"></h2>
+    <p id="modalMapOverview"></p>
+    <p id="modalMapFact" style="color:#888;font-size:1em;"></p>
+  </div>
+</div>
+
+<div id="second-section" class="section" style="display:none;">
+  <div class="settings-container">
+    <i class="fas fa-cog settings-icon" onclick="toggleTCGSettingsModal()"></i>
+  </div>
+  <!-- CS2 Update Notes -->
+  <section class="world-news">
+    <h2>CS2 Update Notes</h2>
+    <div class="news-list">
+      <article>
+        <h3>June 2024 Update</h3>
+        <p>
+          • Added new map “Tuscan” to competitive matchmaking.<br>
+          • Fixed an exploit related to smoke grenades.<br>
+          • Improved performance on Mirage and Nuke.<br>
+          • Updated weapon sounds for the M4A1-S and AK-47.<br>
+          • Various bug fixes and stability improvements.
+        </p>
+      </article>
+      <article>
+        <h3>May 2024 Update</h3>
+        <p>
+          • Introduced Premier Mode leaderboards.<br>
+          • Adjusted economic balance for pistol rounds.<br>
+          • Improved anti-cheat detection and reporting.<br>
+          • Fixed rare crash when loading Vertigo.<br>
+          • Updated player animations for smoother movement.
+        </p>
+      </article>
+      <article>
+        <h3>April 2024 Update</h3>
+        <p>
+          • Added new weapon skins in the “Ancient Collection.”<br>
+          • Improved server tickrate for better hit registration.<br>
+          • Fixed sound occlusion issues on Overpass.<br>
+          • Updated scoreboard UI for clarity.<br>
+          • Various map fixes and exploit patches.
+        </p>
+      </article>
+    </div>
+  </section>
+</div>
+  
+    <div id="settings-modal-tcg" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-button" onclick="toggleTCGSettingsModal()">×</span>
+    <h2>Settings</h2>
+
+    <div class="switch-container">
+      <label class="switch">
+        <input
+          type="checkbox"
+          id="darkModeToggleModal"
+        />
+        <span class="slider"></span>
+      </label>
+      <span>Dark Mode</span>
+    </div>
+
+    <div class="social-button-container">
+      <a
+        href="https://discord.gg/t5BGDzzSXg"
+        target="_blank"
+        class="social-button discord"
+        ><i class="fab fa-discord"></i
+      ></a>
+      <a
+        href="https://median.co/share/jrkxbe#apk"
+        target="_blank"
+        class="social-button android"
+        ><i class="fab fa-android"></i
+      ></a>
+    </div>
+  </div>
+</div>
+
+    <div class="copyright-container">
+  <h5>© 2025 DataLibrary.</h5>
+  <h5>This website has been made by pssyho and only me!</h5>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
